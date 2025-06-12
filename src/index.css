@@ -1,0 +1,320 @@
+h1,
+a,
+input,
+button,
+MenuProps {
+	/* transition: background-color 0.5s, color 0.5s, border 0.5s; */
+	transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.custom-button-style {
+	background-color: #303A47;
+	border: 1px solid #303A47;
+}
+
+.custom-button-style:hover {
+	background-color: #ffffff;
+	color: #303A47;
+	border: 1px solid #303A47;
+}
+
+
+body {
+	font-family: 'Satoshi', sans-serif;
+	/* @apply bg-gray-100; */
+	background-color: #F3F4F6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Satoshi', sans-serif;
+}
+
+p {
+	font-family: 'Satoshi', sans-serif;
+}
+
+.ant-modal-footer .ant-btn-primary {
+	background-color: #4F46E5;
+	color: #fff;
+	transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.ant-btn {
+	transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+	/* color: #4F46E5;  */
+}
+
+.ant-modal-footer .ant-btn-primary:hover {
+	background-color: #4338CA !important;
+	color: #fff;
+}
+
+.hover14 {
+	position: relative;
+}
+
+.hover14::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+
+.hover14:hover::before {
+	-webkit-animation: shine 1.75s;
+	animation: shine 1.75s;
+}
+
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+
+.hover13:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.hover15::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(255, 255, 255, .2);
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+
+.hover15:hover::before {
+	-webkit-animation: circle .75s;
+	animation: circle .75s;
+}
+
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+
+	40% {
+		opacity: 1;
+	}
+
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+
+	40% {
+		opacity: 1;
+	}
+
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
+.img-box {
+	background-image: url('../public/images/estro2.webp');
+	background-position: center;
+	background-size: cover;
+}
+
+.form-box {
+	/* background: transparent; */
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.bg-white-container-register {
+	border-radius: 5px 150px 5px 5px;
+	height: 700px;
+	width: 100%;
+	color: white;
+	margin: 0;
+	transition: background-color 0.8s, border-color 0.8s, color 0.8s;
+
+	background-image: linear-gradient(rgb(83, 79, 79), #303A47), linear-gradient(#ffffff, #303A47);
+	background-blend-mode: hard-light;
+	animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+	0% {
+		background-color: #303A47;
+	}
+
+	100% {
+		background-color: #ffffff;
+	}
+}
+
+.bg-white-container-login {
+	border-radius: 5px 5px 5px 150px;
+	height: 670px;
+	width: 100%;
+	color: white;
+	margin: 0;
+	transition: background-color 0.8s, border-color 0.8s, color 0.8s;
+
+	background-image: linear-gradient(rgb(83, 79, 79), #303A47), linear-gradient(#ffffff, #303A47);
+	background-blend-mode: hard-light;
+	animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+	0% {
+		background-color: #303A47;
+	}
+
+	100% {
+		background-color: #ffffff;
+	}
+}
+
+.bg-white-container-home {
+	border-radius: 5px 5px 5px 5px;
+	height: 550px;
+	width: 100%;
+	color: white;
+	margin: 0;
+	transition: background-color 0.8s, border-color 0.8s, color 0.8s;
+
+	background-image: linear-gradient(rgb(83, 79, 79), #303A47), linear-gradient(#ffffff, #303A47);
+	background-blend-mode: hard-light;
+	animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+	0% {
+		background-color: #303A47;
+	}
+
+	100% {
+		background-color: #ffffff;
+	}
+}
+
+.bg-white-container-header {
+	transition: background-color 0.8s, border-color 0.8s, color 0.8s;
+	background-image: linear-gradient(rgb(66, 60, 60), #303A47), linear-gradient(#303A47, #303A47);
+	background-blend-mode: hard-light;
+	animation: colorChange 10s infinite alternate;
+}
+
+
+/* .bg-white-container-header {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  transition: background-color 0.8s, border-color 0.8s, color 0.8s;
+  background-image: linear-gradient(rgb(66, 60, 60), #303A47), linear-gradient(#303A47, #303A47);
+  background-blend-mode: hard-light;
+  animation: colorChange 10s infinite alternate;
+
+} */
+
+
+/* .bg-white-container-header {
+  transition: background-color 0.8s, border-color 0.8s, color 0.8s;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  background-image:
+    linear-gradient(rgb(66, 60, 60), #303A47),
+    linear-gradient(#303A47, #303A47),
+    url('https://png.pngtree.com/png-vector/20220818/ourmid/pngtree-small-halftone-dots-circle-png-image_6115215.png');
+    
+  background-repeat: no-repeat, repeat, repeat;
+  background-position: center, 0 0, center 0, center -1000px;
+  background-size: cover, cover, 600px, 600px;
+  background-blend-mode: hard-light;
+  animation: fallImage 45s linear infinite, colorChange 10s infinite alternate;
+}
+
+@keyframes fallImage {
+  0% {
+    background-position: center, 0 0, center -600px;
+  }
+  100% {
+    background-position: center, 0 0, center 600px;
+  }
+} */
+
+@keyframes colorChange {
+	0% {
+		background-color: #303A47;
+	}
+
+	100% {
+		background-color: #ffffff;
+	}
+}
+
+
+
+
+.fiCircle {
+	border-radius: 100%;
+	border: none;
+	box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .06);
+}
