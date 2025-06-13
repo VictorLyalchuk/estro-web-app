@@ -16,8 +16,9 @@ const RoleSelect: React.FC<RoleSelectProps> = ({
     errors,
 }) => {
     return (
-        <FormControl fullWidth variant="outlined">
+        <FormControl fullWidth>
             <TextField
+                variant="standard"
                 id="RoleID"
                 name="RoleID"
                 select

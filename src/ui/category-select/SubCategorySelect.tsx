@@ -22,8 +22,9 @@ const SubCategorySelect: React.FC<SubCategorySelectProps> = ({
     lang
 }) => {
     return (
-        <FormControl fullWidth variant="outlined">
+        <FormControl fullWidth>
             <TextField
+                variant="standard"
                 id="subCategoryId"
                 name="subCategoryId"
                 select

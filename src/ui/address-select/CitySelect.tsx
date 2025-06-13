@@ -22,8 +22,9 @@ const CitySelect: React.FC<CitySelectProps> = ({
     lang
 }) => {
     return (
-        <FormControl fullWidth variant="outlined">
+        <FormControl fullWidth>
             <TextField
+                variant="standard"
                 id="cityId"
                 name="cityId"
                 select

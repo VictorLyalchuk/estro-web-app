@@ -19,8 +19,9 @@ const CountrySelect: React.FC<CountrySelectProps> = ({
     lang
 }) => {
     return (
-        <FormControl fullWidth variant="outlined">
+        <FormControl fullWidth>
             <TextField
+                variant="standard"
                 id="countryId"
                 name="countryId"
                 select

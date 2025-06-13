@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormControl, MenuItem, TextField } from '@mui/material';
-import { IMainCategory } from '../../interfaces/Category/Main-Category/IMainCategory'; 
+import { IMainCategory } from '../../interfaces/Category/Main-Category/IMainCategory';
 import { getLocalizedField } from '../../utils/localized/localized';
 
 interface MainCategorySelectProps {
@@ -19,8 +19,9 @@ const MainCategorySelect: React.FC<MainCategorySelectProps> = ({
     lang
 }) => {
     return (
-        <FormControl fullWidth variant="outlined">
+        <FormControl fullWidth>
             <TextField
+                variant="standard"
                 id="mainCategoryId"
                 name="mainCategoryId"
                 select

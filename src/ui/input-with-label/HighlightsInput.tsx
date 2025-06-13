@@ -37,6 +37,7 @@ const HighlightsInput: React.FC<HighlightsInputProps> = ({name, highlights, setH
             {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-center mb-2">
                     <TextField
+                        variant="standard"
                         value={highlight}
                         name="dsa"
                         onChange={(e) => handleChange(index, e.target.value)}

@@ -37,8 +37,9 @@ const CategorySelect: React.FC<CategorySelectProps> = ({
     });
 
     return (
-        <FormControl fullWidth variant="outlined">
+        <FormControl fullWidth>
             <TextField
+                variant="standard"
                 id="CategoryId"
                 name="CategoryId"
                 select

@@ -25,7 +25,7 @@ const AddProduct_es: React.FC<AddProductProps> = (
     const { t, i18n } = useTranslation();
     const lang = i18n.language;
     const baseUrl = APP_ENV.BASE_URL;
-    
+
     return (
         <div className="bg-white p-5 rounded-md shadow-md mb-8 mt-8 ">
 
@@ -96,8 +96,9 @@ const AddProduct_es: React.FC<AddProductProps> = (
                                         <label htmlFor="season" className="block text-sm font-medium text-gray-700 mb-2">
                                             {t('Add_Product_Season')}
                                         </label>
-                                        <FormControl fullWidth variant="outlined">
+                                        <FormControl fullWidth>
                                             <TextField
+                                                variant="standard"
                                                 id="season"
                                                 name="season"
                                                 select
@@ -121,8 +122,9 @@ const AddProduct_es: React.FC<AddProductProps> = (
                                         <label htmlFor="color" className="block text-sm font-medium text-gray-700 mb-2">
                                             {t('Add_Product_Color')}
                                         </label>
-                                        <FormControl fullWidth variant="outlined">
+                                        <FormControl fullWidth>
                                             <TextField
+                                                variant="standard"
                                                 id="color"
                                                 name="color"
                                                 select
@@ -146,8 +148,9 @@ const AddProduct_es: React.FC<AddProductProps> = (
                                         <label htmlFor="material" className="block text-sm font-medium text-gray-700 mb-2">
                                             {t('Add_Product_Material')}
                                         </label>
-                                        <FormControl fullWidth variant="outlined">
+                                        <FormControl fullWidth >
                                             <TextField
+                                                variant="standard"
                                                 id="material"
                                                 name="material"
                                                 select

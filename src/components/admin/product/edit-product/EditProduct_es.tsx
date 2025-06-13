@@ -96,8 +96,9 @@ const EditProduct_es: React.FC<EditProductProps> = (
                                         <label htmlFor="season" className="block text-sm font-medium text-gray-700 mb-2">
                                             {t('Add_Product_Season')}
                                         </label>
-                                        <FormControl fullWidth variant="outlined">
+                                        <FormControl fullWidth>
                                             <TextField
+                                                variant="standard"
                                                 id="season"
                                                 name="season"
                                                 select
@@ -121,8 +122,9 @@ const EditProduct_es: React.FC<EditProductProps> = (
                                         <label htmlFor="color" className="block text-sm font-medium text-gray-700 mb-2">
                                             {t('Add_Product_Color')}
                                         </label>
-                                        <FormControl fullWidth variant="outlined">
+                                        <FormControl fullWidth>
                                             <TextField
+                                                variant="standard"
                                                 id="color"
                                                 name="color"
                                                 select
@@ -146,8 +148,9 @@ const EditProduct_es: React.FC<EditProductProps> = (
                                         <label htmlFor="material" className="block text-sm font-medium text-gray-700 mb-2">
                                             {t('Add_Product_Material')}
                                         </label>
-                                        <FormControl fullWidth variant="outlined">
+                                        <FormControl fullWidth>
                                             <TextField
+                                                variant="standard"
                                                 id="material"
                                                 name="material"
                                                 select
