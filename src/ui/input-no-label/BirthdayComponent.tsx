@@ -7,8 +7,9 @@ interface BirthdayFieldComponentProps {
 }
 
 const BirthdayComponent: React.FC<BirthdayFieldComponentProps> = ({ birthday, handleChange }) => (
-    <FormControl fullWidth variant="outlined">
+    <FormControl fullWidth >
         <TextField
+            variant="outlined"
             name="birthday"
             id="birthday"
             type="date"
