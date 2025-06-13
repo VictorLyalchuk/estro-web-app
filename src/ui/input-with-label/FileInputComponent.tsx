@@ -1,5 +1,6 @@
-import { Button, FormControl } from '@material-ui/core';
+
 import { UserCircleIcon } from '@heroicons/react/24/outline';
+import { Button, FormControl } from '@mui/material';
 import {t} from "i18next";
 
 interface FileFieldComponentProps {
@@ -26,6 +27,7 @@ interface FileFieldComponentProps {
         variant="contained"
         size="small"
         color="primary"
+        sx={{ color: '#fff' }}
         onClick={handleSelectFile}
       >
           {t('RegisterPage_Select')}

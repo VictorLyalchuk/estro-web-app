@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '../../../../theme/theme';
 import TextFieldComponent from '../../../../ui/input-with-label/TextFieldComponent';
 import { useTranslation } from 'react-i18next';

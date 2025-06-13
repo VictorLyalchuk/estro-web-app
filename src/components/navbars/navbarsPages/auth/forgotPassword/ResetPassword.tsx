@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Button, FormControl } from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { Button, FormControl } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
 import 'tailwindcss/tailwind.css';
 import '../../../../../index.css';
 import '../../../../../satoshi.css';
@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next';
 
 const ResetPassword: React.FC<{ email: string; token: string; }> = (proprs) => {
     const { t } = useTranslation();
-    const classes = useStyles();
+    const classes = useStyles(theme);
     const [isLoaderModal, setIsLoaderModal] = useState(false);
     const [isResetPassword, setResetPassword] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
@@ -119,7 +119,7 @@ const ResetPassword: React.FC<{ email: string; token: string; }> = (proprs) => {
                                             />
                                         </ThemeProvider>
                                         <FormControl fullWidth variant="outlined">
-                                            <Button className={classes.button} type="submit" variant="contained" size="large" color="primary" disableElevation>
+                                            <Button sx={classes.button} type="submit" variant="contained" size="large" color="primary" disableElevation>
                                             {t('ResetPassword')}
                                             </Button>
                                         </FormControl>

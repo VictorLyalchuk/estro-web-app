@@ -1,7 +1,7 @@
-import { ThemeProvider } from '@material-ui/core/styles';
 import TextFieldComponent from "../../../../../ui/input-with-label/TextFieldComponent";
 import { theme } from "../../../../../theme/theme";
 import { t } from "i18next";
+import { ThemeProvider } from "@mui/material/styles";
 
 interface AddressShippingProps {
     errors: { country?: string; city?: string; state?: string; street?: string };

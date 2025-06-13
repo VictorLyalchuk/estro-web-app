@@ -1,8 +1,8 @@
-import { Theme, ThemeProvider } from '@material-ui/core/styles';
 import TextFieldComponent from '../../../../../ui/input-with-label/TextFieldComponent';
 import PhoneNumberComponent from '../../../../../ui/input-with-label/PhoneNumberComponent';
 import { ArrowDownIcon, ArrowLongRightIcon } from '@heroicons/react/24/outline';
 import { t } from "i18next";
+import { Theme, ThemeProvider } from '@mui/material/styles';
 
 
 interface PersonalInformationProps {

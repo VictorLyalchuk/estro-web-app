@@ -4,13 +4,13 @@ import { ChangeEvent, FormEvent, useEffect, Fragment, useState } from "react";
 import { IOrderCreate } from '../../../../../interfaces/Bag/IOrderCreate';
 import { createOrder } from '../../../../../services/order/order-services';
 import { useDispatch } from 'react-redux';
-import { FormControl, MenuItem, TextField } from '@material-ui/core';
 import '../../../../../satoshi.css';
 import "./index.css";
 import mastercard from '../../../../../assets/mastercard.webp'
 import visa from '../../../../../assets/visa.webp'
 import CardTextFieldNoLableComponent from '../../../../../ui/input-for-card/CardTextFieldComponent';
-import { Theme, ThemeProvider } from '@material-ui/core/styles';
+import { FormControl, MenuItem, TextField, Theme } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
 import { validateForm } from '../../../../../validations/bag/card-validations';
 import { t } from "i18next";
 import LoaderModal from '../../../../../common/Loader/loaderModal';
@@ -251,6 +251,7 @@ const VisaCreditCard: React.FC<VisaCreditCardProps> = ({ isOpen, setOpen, model,
                                                     <div className="select">
                                                         <FormControl fullWidth variant="outlined">
                                                             <TextField
+                                                                variant="standard"
                                                                 id="card-expiration-month"
                                                                 select
                                                                 onChange={monthOnChange}
@@ -271,6 +272,7 @@ const VisaCreditCard: React.FC<VisaCreditCardProps> = ({ isOpen, setOpen, model,
                                                     <div className="select">
                                                         <FormControl fullWidth variant="outlined">
                                                             <TextField
+                                                                variant="standard"
                                                                 id="card-expiration-year"
                                                                 select
                                                                 onChange={yearOnChange}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, TextField } from '@material-ui/core';
+import { FormControl, TextField } from "@mui/material";
 import TextMaskCustom from '../../services/custom/phone-services';
 
 interface PhoneFieldComponentProps {
@@ -13,12 +13,13 @@ interface PhoneFieldComponentProps {
 const PhoneNumberComponent: React.FC<PhoneFieldComponentProps> = ({ value, label, id, onChange, error }) => (
     <FormControl fullWidth>
         <TextField
+            variant="standard"
             label={label}
             name="textmask"
             id={id}
             value={value}
             onChange={onChange}
-            InputProps={{inputComponent: TextMaskCustom as any}}
+            InputProps={{ inputComponent: TextMaskCustom as any }}
             error={!!error}
             autoComplete="phone"
             placeholder='(099) 00-00-000'

@@ -1,5 +1,5 @@
 import { useState, ChangeEvent, useEffect } from 'react';
-import { Checkbox, FormControl, FormControlLabel, FormGroup, ThemeProvider } from '@material-ui/core';
+import { Checkbox, FormControl, FormControlLabel, FormGroup, ThemeProvider } from '@mui/material';
 import { t } from "i18next";
 import moment from 'moment/moment';
 import { State } from '../../../interfaces/Catalog/State';

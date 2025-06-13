@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, MenuItem, TextField } from '@material-ui/core';
+import { FormControl, MenuItem, TextField } from '@mui/material';
 import { getLocalizedField } from '../../utils/localized/localized';
 import { IMainCategory } from '../../interfaces/Category/Main-Category/IMainCategory';
 import { ISubCategory } from '../../interfaces/Category/Sub-Category/ISubCategory';

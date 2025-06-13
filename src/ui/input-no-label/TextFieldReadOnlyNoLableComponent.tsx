@@ -1,4 +1,4 @@
-import { FormControl, TextField } from '@material-ui/core';
+import { FormControl, TextField } from "@mui/material";
 
 interface TextFieldNoLableComponentProps {
     name: string;
@@ -14,6 +14,7 @@ interface TextFieldNoLableComponentProps {
 const TextFieldReadOnlyNoLableComponent: React.FC<TextFieldNoLableComponentProps> = ({ name, id, value, onChange, error, autoComplete, maxLength, readOnly }) => (
     <FormControl fullWidth >
         <TextField
+            variant="standard"
             id={id}
             name={name}
             value={value}
@@ -24,7 +25,7 @@ const TextFieldReadOnlyNoLableComponent: React.FC<TextFieldNoLableComponentProps
             size="small"
             inputProps={{
                 readOnly: readOnly,
-                maxLength: maxLength 
+                maxLength: maxLength
             }}
         />
         {error ? (

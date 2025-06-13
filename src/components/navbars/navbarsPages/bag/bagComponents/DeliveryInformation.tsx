@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@material-ui/core/styles';
 import { RadioGroup } from '@headlessui/react';
 import { CheckCircleIcon } from '@heroicons/react/24/outline';
 import StoreShipping from '../shipping/StoreShipping';
@@ -10,6 +9,7 @@ import { ICity } from '../../../../../interfaces/Address/ICity';
 import { ICountry } from '../../../../../interfaces/Address/ICountry';
 import { useTranslation } from 'react-i18next';
 import { BuildingStorefrontIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
+import { ThemeProvider } from '@mui/material/styles';
 
 interface DeliveryInformationProps {
   errors: { country?: string; city?: string; state?: string; street?: string; shipping?: string };

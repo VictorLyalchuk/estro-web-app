@@ -6,7 +6,7 @@ import { store } from './store/store.ts'
 import './index.css'
 import './satoshi.css';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material/styles'
 import theme from './theme';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

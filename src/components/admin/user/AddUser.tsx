@@ -1,5 +1,5 @@
 import { useState, ChangeEvent } from 'react';
-import { FormControl, ThemeProvider } from '@material-ui/core';
+import { FormControl, ThemeProvider } from '@mui/material';
 import { t } from "i18next";
 import { State } from '../../../interfaces/Catalog/State';
 import { APP_ENV } from '../../../env/config';

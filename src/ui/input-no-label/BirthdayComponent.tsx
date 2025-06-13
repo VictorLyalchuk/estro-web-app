@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, TextField } from '@material-ui/core';
+import { FormControl, TextField } from "@mui/material";
 
 interface BirthdayFieldComponentProps {
     birthday: string;

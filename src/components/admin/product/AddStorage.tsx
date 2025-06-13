@@ -5,7 +5,7 @@ import { message } from 'antd';
 import { APP_ENV } from "../../../env/config";
 import { useTranslation } from 'react-i18next';
 import { getLocalizedField } from '../../../utils/localized/localized';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '../../../theme/theme';
 import StorageTextFieldNoLableComponent from '../../../ui/input-with-label/StorageTextFieldNoLableComponent';
 import { getProductById } from '../../../services/product/product-services';

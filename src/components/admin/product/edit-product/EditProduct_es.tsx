@@ -1,8 +1,8 @@
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import { FormControl, MenuItem, TextField } from '@mui/material';
 import { theme } from '../../../../theme/theme';
 import TextFieldComponent from '../../../../ui/input-with-label/TextFieldComponent';
 import PriceTextFieldNoLableComponent from '../../../../ui/input-with-label/PriceTextFieldNoLableComponent';
-import { FormControl, MenuItem, TextField } from '@material-ui/core';
 import { getLocalizedField } from '../../../../utils/localized/localized';
 import LongTextFieldComponents from '../../../../ui/input-with-label/LongTextFieldComponents';
 import CheckboxGroup from '../../../../ui/input-with-label/CheckboxGroup';

@@ -1,24 +1,52 @@
-import { createTheme } from '@material-ui/core/styles';
+import { createTheme } from '@mui/material/styles';
+
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#303A47', 
+      main: '#303A47',
     },
   },
-  overrides: {
+  components: {
     MuiButton: {
-      root: {
-        color: '#303A47', 
-      },
-      contained: {
-        backgroundColor: '#303A47', 
-        '&:hover': {
-          backgroundColor: '#303A47', 
+      styleOverrides: {
+        root: {
+          // color: '#fff', 
+          color: '#303A47',
         },
+        // contained: {
+        //   backgroundColor: '#303A47',
+        //   '&:hover': {
+        //     backgroundColor: '#303A47',
+        //   },
+        // },
       },
     },
   },
 });
-
 export default theme;
+
+
+// import { createTheme } from '@material-ui/core/styles';
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: '#303A47', 
+//     },
+//   },
+//   overrides: {
+//     MuiButton: {
+//       root: {
+//         color: '#303A47', 
+//       },
+//       contained: {
+//         backgroundColor: '#303A47', 
+//         '&:hover': {
+//           backgroundColor: '#303A47', 
+//         },
+//       },
+//     },
+//   },
+// });
+
+// export default theme;

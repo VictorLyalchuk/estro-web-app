@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, IconButton, InputAdornment, TextField } from '@material-ui/core';
+import { FormControl, IconButton, InputAdornment, TextField } from "@mui/material";
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 interface PasswordFieldComponentProps {
@@ -17,6 +17,7 @@ interface PasswordFieldComponentProps {
 const PasswordFieldComponent: React.FC<PasswordFieldComponentProps> = ({ label, name, id, value, onChange, error, autoComplete, showPassword, handlePasswordToggle }) => (
     <FormControl fullWidth >
         <TextField
+            variant="standard"
             label={label}
             type={showPassword ? 'text' : 'password'}
             name={name}

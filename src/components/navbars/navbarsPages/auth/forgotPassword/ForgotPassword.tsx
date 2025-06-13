@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Button, FormControl } from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { Button, FormControl } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
 import '../../../../../satoshi.css';
 import '../../../../../index.css';
 import 'tailwindcss/tailwind.css';
@@ -14,7 +14,7 @@ import LoaderModal from '../../../../../common/Loader/loaderModal';
 
 const ForgotPassword = ({ onPasswordResetConfirmation }: { onPasswordResetConfirmation: () => void }) => {
     const { t } = useTranslation();
-    const classes = useStyles();
+    const classes = useStyles(theme);
     const [isLoaderModal, setIsLoaderModal] = useState(false);
     const [isSendEmail, setSendEmail] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
@@ -96,7 +96,7 @@ const ForgotPassword = ({ onPasswordResetConfirmation }: { onPasswordResetConfir
                                             />
                                         </ThemeProvider>
                                         <FormControl fullWidth variant="outlined">
-                                            <Button className={classes.button} type="submit" variant="contained" size="large" color="primary" disableElevation>
+                                            <Button sx={classes.button} type="submit" variant="contained" size="large" color="primary" disableElevation>
                                                 {t('ForgotPassword_ResetPassword')}
                                             </Button>
                                         </FormControl>

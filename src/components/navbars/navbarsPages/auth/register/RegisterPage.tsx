@@ -4,9 +4,9 @@ import { IRegister } from '../../../../../interfaces/Auth/IRegister';
 import 'tailwindcss/tailwind.css';
 import '../../../../../index.css';
 import { APP_ENV } from "../../../../../env/config";
-import { Button, FormControl } from '@material-ui/core';
+import { Button, FormControl } from '@mui/material';
 import { GiftIcon, BanknotesIcon, TrophyIcon } from '@heroicons/react/24/outline';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import '../../../../../satoshi.css';
 import { useGoogleLogin } from "@react-oauth/google";
 import ReactCodeInput from "react-code-input";
@@ -31,7 +31,7 @@ const RegisterPage = () => {
     const twilio_acc_sid = APP_ENV.TWILIO_ACC_SID;
     const twilio_service_sid = APP_ENV.TWILIO_SERVICE_SID;
 
-    const classes = useStyles();
+    const classes = useStyles(theme);
     const [isLoaderModal, setIsLoaderModal] = useState(false);
     const [isRegistered, setIsRegistered] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
@@ -357,15 +357,15 @@ const RegisterPage = () => {
                                         <h2>{t('RegisterPage_ChooseOption')}</h2>
                                     </div>
                                     <div className={"flex-col bg-gray-100 p-10 rounded-2xl gap-2 w-59 flex"}>
-                                        <Button onClick={() => { setIsEmail(true); setIsChosen(true); }} className={classes.button2} size="large">
+                                        <Button onClick={() => { setIsEmail(true); setIsChosen(true); }} sx={classes.button2} size="large">
                                             <svg className={"h-20 -ml-2"} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="none" stroke="#383843" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"><path d="M1.75 3.75h12.5v9.5H1.75z" /><path d="m2.25 4.25l5.75 5l5.75-5" /></g></svg>
                                             <p className={"ml-2 lowercase"}>{t('RegisterPage_Email')}</p>
                                         </Button>
-                                        <Button onClick={() => { setIsPhone(true); setIsChosen(true); }} className={classes.button2} size="large">
+                                        <Button onClick={() => { setIsPhone(true); setIsChosen(true); }} sx={classes.button2} size="large">
                                             <svg className={"h-20 -ml-4"} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#3d3d3d" d="M9 14a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zM7 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z" /></svg>
                                             <p className={"lowercase"}>{t('RegisterPage_Phone')}</p>
                                         </Button>
-                                        <Button onClick={() => registerGoogle()} className={classes.button2} size="large">
+                                        <Button onClick={() => registerGoogle()} sx={classes.button2} size="large">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="#383843" d="M881 442.4H519.7v148.5h206.4c-8.9 48-35.9 88.6-76.6 115.8c-34.4 23-78.3 36.6-129.9 36.6c-99.9 0-184.4-67.5-214.6-158.2c-7.6-23-12-47.6-12-72.9s4.4-49.9 12-72.9c30.3-90.6 114.8-158.1 214.7-158.1c56.3 0 106.8 19.4 146.6 57.4l110-110.1c-66.5-62-153.2-100-256.6-100c-149.9 0-279.6 86-342.7 211.4c-26 51.8-40.8 110.4-40.8 172.4S151 632.8 177 684.6C240.1 810 369.8 896 519.7 896c103.6 0 190.4-34.4 253.8-93c72.5-66.8 114.4-165.2 114.4-282.1c0-27.2-2.4-53.3-6.9-78.5" /></svg>
                                             <p className={"ml-1.5 lowercase"}>Google</p>
                                         </Button>
@@ -471,7 +471,7 @@ const RegisterPage = () => {
 
                                                 <FormControl fullWidth variant="outlined">
                                                     <Button
-                                                        className={classes.button}
+                                                        sx={classes.button}
                                                         type="submit"
                                                         variant="contained"
                                                         size="large"
@@ -481,7 +481,7 @@ const RegisterPage = () => {
                                                         {t('RegisterPage_Register')}
                                                     </Button>
                                                     <Button
-                                                        className={classes.button}
+                                                        sx={classes.button}
                                                         type="button"
                                                         variant="contained"
                                                         size="large"
@@ -562,7 +562,7 @@ const RegisterPage = () => {
                                                 <FormControl fullWidth variant="outlined">
                                                     {!isTryToCode ? (
                                                         <Button
-                                                            className={classes.button}
+                                                            sx={classes.button}
                                                             type="button"
                                                             variant="contained"
                                                             size="large"
@@ -575,7 +575,7 @@ const RegisterPage = () => {
                                                         </Button>
                                                     ) : (
                                                         <Button
-                                                            className={classes.button}
+                                                            sx={classes.button}
                                                             type="submit"
                                                             variant="contained"
                                                             size="large"
@@ -587,7 +587,7 @@ const RegisterPage = () => {
                                                     )}
 
                                                     <Button
-                                                        className={classes.button}
+                                                        sx={classes.button}
                                                         type="button"
                                                         variant="contained"
                                                         size="large"

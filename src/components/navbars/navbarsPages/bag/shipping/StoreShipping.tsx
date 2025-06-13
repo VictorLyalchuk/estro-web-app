@@ -1,10 +1,10 @@
-import { FormControl, MenuItem, TextField } from '@material-ui/core';
 import { IStore } from '../../../../../interfaces/Store/IStore';
 import '../../../../../satoshi.css';
 import { ICity } from '../../../../../interfaces/Address/ICity';
 import { ICountry } from '../../../../../interfaces/Address/ICountry';
 import { useTranslation } from 'react-i18next';
 import { getLocalizedField } from '../../../../../utils/localized/localized';
+import { FormControl, MenuItem, TextField } from '@mui/material';
 
 interface StoreShippingProps {
   countryOptions: ICountry[] | null;
@@ -27,6 +27,7 @@ const StoreShipping: React.FC<StoreShippingProps> = ({ countryOptions, cityOptio
       </label>
       <FormControl fullWidth variant="outlined">
         <TextField
+        variant="standard"
           id="country"
           name="country"
           select
@@ -49,6 +50,7 @@ const StoreShipping: React.FC<StoreShippingProps> = ({ countryOptions, cityOptio
       </label>
       <FormControl fullWidth variant="outlined">
         <TextField
+        variant="standard"
           id="city"
           name="city"
           select
@@ -73,6 +75,7 @@ const StoreShipping: React.FC<StoreShippingProps> = ({ countryOptions, cityOptio
       </label>
       <FormControl fullWidth variant="outlined">
         <TextField
+        variant="standard"
           id="street"
           name="street"
           select

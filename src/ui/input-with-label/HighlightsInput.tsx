@@ -1,6 +1,8 @@
+import { Add, Remove } from '@mui/icons-material';
+import { IconButton, TextField } from '@mui/material';
 import React from 'react';
-import { TextField, IconButton } from '@material-ui/core';
-import { Add as AddIcon, Remove as RemoveIcon } from '@material-ui/icons';
+// import { TextField, IconButton } from '@material-ui/core';
+// import { Add as AddIcon, Remove as RemoveIcon } from '@material-ui/icons';
 import { useTranslation } from 'react-i18next';
 
 interface HighlightsInputProps {
@@ -44,7 +46,7 @@ const HighlightsInput: React.FC<HighlightsInputProps> = ({name, highlights, setH
                         error={!!error}
                     />
                     <IconButton onClick={() => handleRemove(index)} color="secondary">
-                        <RemoveIcon />
+                        <Remove />
                     </IconButton>
                 </div>
             ))}
@@ -58,7 +60,7 @@ const HighlightsInput: React.FC<HighlightsInputProps> = ({name, highlights, setH
                 onClick={handleAdd}
                 className="p-2 mr-3 flex items-center justify-center rounded-md border px-8 py-2 text-base font-medium text-white   bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
-                <AddIcon className="mr-2" />
+                <Add className="mr-2" />
                 {t('Add_Product_Add_Features')}
             </button>
         </div>

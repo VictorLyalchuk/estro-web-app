@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, IconButton, InputAdornment, TextField } from '@material-ui/core';
+import { FormControl, IconButton, InputAdornment, TextField } from "@mui/material";
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 interface PasswordFieldNoLableComponentProps {
@@ -16,6 +16,7 @@ interface PasswordFieldNoLableComponentProps {
 const PasswordFieldNoLableComponent: React.FC<PasswordFieldNoLableComponentProps> = ({ name, id, value, onChange, error, autoComplete, showPassword, handlePasswordToggle }) => (
     <FormControl fullWidth >
         <TextField
+            variant="standard"
             type={showPassword ? 'text' : 'password'}
             name={name}
             id={id}

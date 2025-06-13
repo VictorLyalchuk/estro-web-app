@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { IUserEdit } from '../../../../interfaces/Auth/IUserEdit';
 import moment from 'moment/moment';
 import { IIUserImageEdit } from '../../../../interfaces/Auth/IIUserImageEdit';
-import { FormControl, TextField, ThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '@mui/material';
 import { beforeUpload, createUserImage, deleteUserImage, editUserImage } from '../../../../services/images/images-services';
 import { APP_ENV } from '../../../../env/config';
 import { editUserData, refreshRedux, refreshToken } from '../../../../services/accounts/account-services';
@@ -24,6 +24,7 @@ import MyDatePicker from '../../../../ui/data-picker/MyDatePicker';
 import axios from 'axios';
 import { validateFormPassword } from '../../../../validations/account/password-validations';
 import LoaderModal from '../../../../common/Loader/loaderModal';
+import { FormControl, TextField } from '@mui/material';
 
 const Settings: React.FC<SettingsUserProps> = ({ userProfile, authType }) => {
   const baseUrl = APP_ENV.BASE_URL;

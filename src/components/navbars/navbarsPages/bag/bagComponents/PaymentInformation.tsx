@@ -1,5 +1,5 @@
 import { RadioGroup } from '@headlessui/react';
-import { ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider } from '@mui/material/styles';
 import { paymentList } from '../../../../../data/paymentList';
 import { useDispatch, useSelector } from 'react-redux';
 import { ICardReducerState, updateDiscount } from '../../../../../store/bag/CardReducer';
