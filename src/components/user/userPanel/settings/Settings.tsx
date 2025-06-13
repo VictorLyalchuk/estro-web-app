@@ -25,6 +25,7 @@ import axios from 'axios';
 import { validateFormPassword } from '../../../../validations/account/password-validations';
 import LoaderModal from '../../../../common/Loader/loaderModal';
 import { FormControl, TextField } from '@mui/material';
+import Loader from '../../../../common/Loader/loader';
 
 const Settings: React.FC<SettingsUserProps> = ({ userProfile, authType }) => {
   const baseUrl = APP_ENV.BASE_URL;
@@ -40,6 +41,7 @@ const Settings: React.FC<SettingsUserProps> = ({ userProfile, authType }) => {
   const [open, setOpen] = useState(true)
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [values, setValues] = useState<State>({
     textmask: '(   )    -  -  ',
   });
@@ -113,6 +115,7 @@ const Settings: React.FC<SettingsUserProps> = ({ userProfile, authType }) => {
 
   const changeImage = async (file: File) => {
     try {
+      setLoading(true);
       const isValid = await beforeUpload(file);
 
       if (!isValid) {
@@ -132,6 +135,7 @@ const Settings: React.FC<SettingsUserProps> = ({ userProfile, authType }) => {
       await editUserImage(editDTO);
       await refreshToken();
       await refreshRedux(dispatch);
+      setLoading(false);
     } catch (error) {
       console.error('Error changing image:', error);
     }
@@ -218,6 +222,16 @@ const Settings: React.FC<SettingsUserProps> = ({ userProfile, authType }) => {
 
                 <ThemeProvider theme={theme}>
                   <div className=" lg:col-span-9">
+
+                                {loading ? (
+              <tr>
+                <td colSpan={8} className="text-center py-4 min-h-[662px]">
+                  <div className="min-h-[662px] flex items-center justify-center">
+                    <Loader />
+                  </div>
+                </td>
+              </tr>
+            ) : (
                     <form onSubmit={onSubmit}>
                       {/* Profile section */}
                       <div className="px-4 py-6 sm:p-6 lg:pb-8">
@@ -547,6 +561,7 @@ const Settings: React.FC<SettingsUserProps> = ({ userProfile, authType }) => {
                         </div>
                       </div>
                     </form>
+                                  )}
                   </div>
                 </ThemeProvider>
 
