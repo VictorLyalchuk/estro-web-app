@@ -10,7 +10,7 @@ const baseUrl = APP_ENV.BASE_URL;
 
 // Створюємо екземпляр axios
 const instance = axios.create({
-    baseURL: `${baseUrl}/api/StoreControllers`,
+    baseURL: `${baseUrl}/api/Store`,
     headers: {
         "Content-Type": "application/json"
     }
