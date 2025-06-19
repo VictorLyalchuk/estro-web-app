@@ -52,6 +52,7 @@ import OrderItemsList from "./components/admin/orders/OrderItemsList.tsx";
 import { t } from "i18next";
 import ReviewList from "./components/admin/review/ReviewList.tsx";
 import FinancialReports from "./components/admin/report/finance-report/FinancialReports.tsx";
+import { checkTokenAndLogoutIfExpired } from "./services/accounts/account-services.ts";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -61,6 +62,7 @@ function App() {
 
   useAuthTokenEffect()
   useGetFavoritesEffect();
+  checkTokenAndLogoutIfExpired();
 
   return loading ? (
     <>

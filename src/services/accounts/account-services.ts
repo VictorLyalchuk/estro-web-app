@@ -20,20 +20,6 @@ const instance = axios.create({
     }
 });
 
-// Інтерцептор для додавання токену до заголовків
-instance.interceptors.request.use(
-    (config) => {
-        const token = getToken();
-        if (token) {
-            config.headers["Authorization"] = "Bearer " + token;
-        }
-        return config;
-    },
-    (error) => {
-        return Promise.reject(error);
-    }
-);
-
 // Інтерцептор для обробки помилок і оновлення токену
 instance.interceptors.response.use(
     (response) => {
@@ -56,6 +42,46 @@ instance.interceptors.response.use(
         return Promise.reject(error);
     }
 );
+
+// Функція перевірки простроченості токена
+function isTokenExpired(token: string) {
+  try {
+    const decoded = jwtDecode<{ exp?: number }>(token);
+    if (!decoded.exp) {
+      // Якщо немає exp, вважаємо токен простроченим або невалідним
+      return true;
+    }
+    const currentTime = Date.now() / 1000;
+    return decoded.exp < currentTime;
+  } catch {
+    return true; // якщо не валідний — вважай простроченим
+  }
+}
+
+export function checkTokenAndLogoutIfExpired() {
+  const token = localStorage.getItem('token');
+  if (token && isTokenExpired(token)) {
+    localStorage.removeItem('token');
+    window.location.href = '/login';
+    return true;  // токен прострочений
+  }
+  return false;  // токен валідний або відсутній
+}
+
+// Інтерцептор запиту з перевіркою токена та редіректом, якщо прострочений
+instance.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    if (isTokenExpired(token)) {
+      localStorage.removeItem('token');
+      window.location.href = '/login';
+      return Promise.reject(new Error('Token expired'));
+    }
+    config.headers['Authorization'] = `Bearer ${token}`;
+  }
+  return config;
+});
+
 
 // Функція для отримання токену з локального сховища
 export function getToken() {
