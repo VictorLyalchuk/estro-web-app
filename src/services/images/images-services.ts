@@ -66,7 +66,7 @@ export async function createUserImage(file: File) {
 //3
 export async function editUserImage(userImageEdit: IIUserImageEdit ) {
     try {
-        await instance.post(`${baseUrl}/api/AccountControllers/EditUserImage`, userImageEdit);
+        await instance.post(`${baseUrl}/api/Account/EditUserImage`, userImageEdit);
     } catch (error) {
         console.error('Failed to edit image user:', error);
         throw error;

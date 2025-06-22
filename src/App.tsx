@@ -60,7 +60,7 @@ function App() {
     setTimeout(() => setLoading(false), 1000);
   }, []);
 
-  useAuthTokenEffect()
+  useAuthTokenEffect();
   useGetFavoritesEffect();
   checkTokenAndLogoutIfExpired();
 
